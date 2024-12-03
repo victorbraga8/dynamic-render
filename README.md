@@ -25,7 +25,7 @@ To get started with this project, follow the instructions below:
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/your-username/dynamic-render.git
+   git clone https://github.com/victorbraga8/dynamic-render.git
    ```
 
 2. **Navigate to the project directory**:
