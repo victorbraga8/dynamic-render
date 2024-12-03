@@ -51,7 +51,7 @@ To get started with this project, follow the instructions below:
 - **Next.js**: A React framework for server-side rendering and static site generation.
 - **react-hook-form**: A library for managing form state.
 - **Tailwind CSS**: A utility-first CSS framework for rapid UI development.
-- **Radix UI**: A set of unstyled, accessible UI components for building high-quality design systems and web apps.
+- **Shadcn UI**: A set of unstyled, accessible UI components for building high-quality design systems and web apps.
 
 ## Benefits of Dynamic Rendering
 
