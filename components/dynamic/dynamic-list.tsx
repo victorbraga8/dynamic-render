@@ -5,34 +5,23 @@ import Select from "react-select";
 export default function DynamicList({
   entity,
   handleSelectedForm,
-  initialValues,
+  selectedOption,
 }: {
   entity: string;
   handleSelectedForm: (value: any) => void;
-  initialValues: any;
+  selectedOption: any;
 }) {
   const listItens =
     entity === "user"
-      ? [
-          { label: "Dados cadastrais", value: "personalData" },
-          { label: "Dados adicionais", value: "additionalData" },
-          { label: "Jornada de trabalho", value: "workJourney" },
-          { label: "Configurações REP-P", value: "repConfig" },
-        ]
-      : [
-          { label: "Informações da empresa", value: "companyInfo" },
-          { label: "Dados financeiros", value: "financialData" },
-          { label: "Compliance", value: "compliance" },
-          { label: "Documentos legais", value: "legalDocs" },
-        ];
+      ? [{ label: "Dados cadastrais", value: "personalData" }]
+      : [{ label: "Informações da empresa", value: "companyInfo" }];
 
   return (
     <Select
-      defaultValue={initialValues}
+      placeholder="Selecione"
+      value={selectedOption}
       options={listItens}
-      className="mt-8 w-[15%]"
       onChange={(selectedOption) => handleSelectedForm(selectedOption)}
-      isClearable
     />
   );
 }

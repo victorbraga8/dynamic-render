@@ -1,3 +1,4 @@
+import CompanyForm from "./company-form";
 import UserForm from "./user-form";
 
 type DynamicProviderProps = {
@@ -20,13 +21,15 @@ export default function DynamicProvider({
       personalData: <UserForm />,
     },
     company: {
-      companyInfo: <div>Em breve...</div>,
+      companyInfo: <CompanyForm />,
     },
   };
 
   const currentForm = (entity in entityMap
     ? entityMap[entity as keyof typeof entityMap]
-    : {})[selectedItem] || <div>Formulário não encontrado</div>;
+    : {})[selectedItem] || (
+    <div className="mt-4">Selecione o grupo do formulário</div>
+  );
 
   return currentForm;
 }
