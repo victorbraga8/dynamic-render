@@ -16,7 +16,7 @@ export default function DynamicProvider({
   selectedItem,
 }: DynamicProviderProps) {
   const entityMap: EntityMapProps = {
-    collaborator: {
+    user: {
       personalData: <UserForm />,
     },
     company: {
