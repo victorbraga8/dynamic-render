@@ -1,6 +1,7 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-export default function CompanyForm() {
+export default function CompanyForm({ control }: { control: any }) {
   return (
     <>
       <div className="flex gap-4 mt-4">
@@ -11,7 +12,11 @@ export default function CompanyForm() {
           >
             Razão Social
           </Label>
-          <Input id="razaoSocial" placeholder="Digite a Razão Social" />
+          <Input
+            id="razaoSocial"
+            placeholder="Digite a Razão Social"
+            {...control.register("razaoSocial")}
+          />
         </div>
         <div className="flex flex-col">
           <Label
@@ -20,7 +25,11 @@ export default function CompanyForm() {
           >
             Classificação
           </Label>
-          <Input id="classificacao" placeholder="Digite a Classificação" />
+          <Input
+            id="classificacao"
+            placeholder="Digite a Classificação"
+            {...control.register("classificacao")}
+          />
         </div>
       </div>
     </>

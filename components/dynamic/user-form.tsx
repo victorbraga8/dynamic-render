@@ -1,6 +1,7 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-export default function UserForm() {
+export default function UserForm({ control }: { control: any }) {
   return (
     <>
       <div className="flex gap-4 mt-4">
@@ -11,7 +12,11 @@ export default function UserForm() {
           >
             Nome
           </Label>
-          <Input id="nome" placeholder="Digite o seu nome" />
+          <Input
+            id="nome"
+            placeholder="Digite o seu nome"
+            {...control.register("nome")}
+          />
         </div>
         <div className="flex flex-col">
           <Label
@@ -20,7 +25,11 @@ export default function UserForm() {
           >
             Sobrenome
           </Label>
-          <Input id="sobrenome" placeholder="Digite o seu sobrenome" />
+          <Input
+            id="sobrenome"
+            placeholder="Digite o seu sobrenome"
+            {...control.register("sobrenome")}
+          />
         </div>
       </div>
     </>

@@ -1,3 +1,4 @@
+import { useFormContext } from "react-hook-form";
 import CompanyForm from "./company-form";
 import UserForm from "./user-form";
 
@@ -16,12 +17,14 @@ export default function DynamicProvider({
   entity,
   selectedItem,
 }: DynamicProviderProps) {
+  const { control } = useFormContext();
+
   const entityMap: EntityMapProps = {
     user: {
-      personalData: <UserForm />,
+      personalData: <UserForm control={control} />,
     },
     company: {
-      companyInfo: <CompanyForm />,
+      companyInfo: <CompanyForm control={control} />,
     },
   };
 
