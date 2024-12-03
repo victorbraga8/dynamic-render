@@ -12,7 +12,7 @@ Dynamic Render is designed to demonstrate how dynamic rendering can be utilized 
 
 ## Features
 
-- **React Hook Form Integration**: We use `react-hook-form` to manage form states, validation, and submission. This library provides an easy-to-use API for handling complex forms with minimal re-renders, enhancing performance.
+- **React Hook Form Integration**: We use `react-hook-form` to manage form states, and submission. This library provides an easy-to-use API for handling complex forms with minimal re-renders, enhancing performance.
 
 - **Dynamic Component Rendering**: Components and forms are rendered dynamically based on the provided props and state. This allows for a more modular and scalable architecture.
 
